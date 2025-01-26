@@ -8,7 +8,7 @@ async def process(update:Update,context:CallbackContext)->None:
     await update.message.reply_text(f"You said:{update.message.text}")
 
 def main()->None:
-    API_TOKEN ="7951231349:AAGOze0hFR8wTTjf56UuGvL-2tfrgK25hs8"
+    API_TOKEN ="API Token"
     application =Application.builder().token(API_TOKEN).build()
     application.add_handler(CommandHandler("start",start))
     application.add_handler(MessageHandler(filters.TEXT&~filters.COMMAND,process))
