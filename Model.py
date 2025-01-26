@@ -46,7 +46,7 @@ async def handle_message(update: Update, context: CallbackContext) -> None:
 
 def main():
  
-    TOKEN = "7951231349:AAGOze0hFR8wTTjf56UuGvL-2tfrgK25hs8"
+    TOKEN = "API Token"
     application = Application.builder().token(TOKEN).build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message)) 
